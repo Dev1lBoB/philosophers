@@ -6,7 +6,7 @@
 /*   By: wpersimm <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 15:20:59 by wpersimm          #+#    #+#             */
-/*   Updated: 2021/04/20 00:59:23 by wpersimm         ###   ########.fr       */
+/*   Updated: 2021/07/21 13:22:36 by wpersimm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_usleep(int time, t_all *all)
 
 	gettimeofday(&all->tp3, 0);
 	time2 = all->tp3.tv_sec * 1000 + all->tp3.tv_usec / 1000;
-	time1 = time / 1000 + all->tp3.tv_sec * 1000 + all->tp3.tv_usec / 1000;
+	time1 = time / 1000 + time2;
 	while (time2 < time1)
 	{
 		usleep(100);
